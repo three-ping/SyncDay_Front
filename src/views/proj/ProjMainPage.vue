@@ -41,8 +41,8 @@ import axios from 'axios';
 import { useToast } from 'primevue/usetoast';
 
 import SideBar from '@/components/SideBar.vue';
-import ProjItem from './sidebar/ProjItem.vue';
-import WorkspaceItem from './sidebar/WorkspaceItem.vue';
+import ProjItem from './SideBar/ProjItem.vue';
+import WorkspaceItem from './SideBar/WorkspaceItem.vue';
 import NewProjModal from './components/NewProjModal.vue';
 
 

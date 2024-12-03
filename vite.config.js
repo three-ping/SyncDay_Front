@@ -21,7 +21,7 @@ export default defineConfig({
       // },
       "^/api": {
         // '^' 추가하여 정확한 경로 매칭
-        target: "http://localhost:5000",
+        target: "http://localhost:8080",
         changeOrigin: true,
         rewrite: path => path.replace("/^/api/", ""),
         secure: false, // SSL 관련 검증 비활성화
