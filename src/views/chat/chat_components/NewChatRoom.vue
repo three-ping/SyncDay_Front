@@ -256,7 +256,7 @@ loadUsers();
   padding: 3px 10px;
   font-size: 1rem;
   border: none;
-  border-radius: 15px;
+  border-radius: 10px;
   cursor: pointer;
   display: block;
   margin: 0 auto;

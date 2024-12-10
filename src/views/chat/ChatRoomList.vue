@@ -30,7 +30,7 @@
         <NewChatRoom v-if="isPopupVisible" @close="closeNewChatRoom" @chatCreated="addNewChat"/>
         <ChatRoom  v-if="selectedRoom" :roomId="selectedRoom.roomId"
         :chatRoomName="selectedRoom.chatRoomName"  
-        @close="closeChatRoom" :removeChatFromList="removeChatFromList"/>
+        @close="closeChatRoom" :removeChatFromList="removeChatFromList" @updateLastMessage="updateLastMessage"/>
     </div>
   </template>
   
@@ -88,6 +88,14 @@ const openChatRoom = (chat) => {
 // 채팅방 닫기
 const closeChatRoom = () => {
   selectedRoom.value = null;
+};
+
+// 새 채팅 메세지 업데이트
+const updateLastMessage = ({ roomId, lastMessage, sentTime }) => {
+  const room = chatList.value.find((chat) => chat.roomId === roomId);
+  if (room) {
+    room.lastMessage = lastMessage;
+  }
 };
 
 // 채팅방 목록 데이터 가져오기
